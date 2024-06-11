@@ -1,137 +1,3 @@
-.products {
-  padding: 79px 100px 110px;
-  background-color: #F2F0F9;
-}
-
-.products-info {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 20px;
-  padding: 0 20px 7px;
-  border-bottom: 1px solid #C6C2DE;
-}
-
-.products-info__text {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 2.4px;
-  color: #6E6893;
-  text-transform: uppercase;
-}
-
-.products-info__cost {
-  font-size: 14px;
-  font-weight: 500;
-  color: #6E6893;
-}
-
-.products-info__price {
-  font-size: 18px;
-  font-weight: 700;
-  color: #6D5BD0;
-}
-
-.products-inner {
-  background-color: #F2F0F9;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
-}
-
-.products-group {
-  display: grid;
-  grid-template-columns: 108px 1fr auto;
-  align-items: center;
-  gap: 20px;
-  padding: 15px 20px;
-  background-color: #FFF;
-}
-
-.products-group__form {
-  position: relative;
-  max-width: 392px;
-  height: 40px;
-}
-
-.products-group__button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 6px;
-  outline: 1px solid #C6C2DE;
-}
-
-.products-group__text {
-  font-size: 16px;
-  color: #25213B;
-}
-
-.product-group__search-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.products-group__search {
-  width: 100%;
-  height: 100%;
-  padding: 0px 10px 0px 40px;
-  font-size: 12px;
-  background-color: #F4F2FF;
-  color: #6E6893;
-  border-radius: 6px;
-  border: none;
-}
-
-.products-group__search::placeholder {
-  color: #6E6893;
-}
-
-.products-group__btn {
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #6D5BD0;
-  color: #FFF;
-  border-radius: 6px;
-  text-transform: uppercase;
-}
-
-.table {
-  background-color: #FFF;
-}
-
-.table-box {
-  border-collapse: collapse;
-}
-
-.table-box__head {}
-
-.table-box__head tr {
-  font-size: 12px;
-  font-weight: 600;
-  background-color: #F4F2FF;
-  color: #6E6893;
-  text-align: left;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-
-.table-box th,
-.table-box td {
-  padding: 15px;
-}
-
-.table-box tbody tr {
-  border-bottom: 1px solid #D9D5EC;
-}
-
-
-
-
-
-
-
-
 .overlay {
   /* display: none; */
   position: fixed;
@@ -141,11 +7,12 @@
   bottom: 0;
   padding: 50px 0;
   background-color: rgba(0, 0, 0, .2);
+  overflow: auto;
 }
 
 .modal_container {
-  margin: auto;
   position: relative;
+  margin: auto;
   padding: 38px 106px 28px;
   max-width: 800px;
   background-color: #F2F0F9;
@@ -160,7 +27,7 @@
 }
 
 .modal__text {
-  padding: 0 0 21px;
+  padding: 0 30px 21px 0;
   color: #6E6893;
   font-size: 24px;
   font-style: normal;
@@ -178,7 +45,12 @@
 .modal-form__fieldset {
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 250px));
-  grid-template-rows: repeat(5, minmax(min-content, 60px));
+  grid-template-areas:
+    "name description"
+    "category description"
+    "units count"
+    "discount quantity"
+    ". file";
   gap: 12px 24px;
   padding: 28px;
   margin: 0 0 32px;
@@ -188,10 +60,35 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
 }
 
+.modal-form__label_name {
+  grid-area: name;
+}
+
+.modal-form__label_category {
+  grid-area: category;
+}
+
+.modal-form__label_units {
+  grid-area: units;
+}
+
+.modal-form__label_description {
+  grid-area: description;
+}
+
+.modal-form__label_discount {
+  grid-area: discount;
+}
+
+.modal-form__label_quantity {
+  grid-area: quantity;
+}
+
+.modal-form__label_count {
+  grid-area: count;
+}
+
 .modal-form__label {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
   color: #6E6893;
   font-size: 12px;
   font-weight: 600;
@@ -201,10 +98,11 @@
 }
 
 .modal-form__label:nth-child(7) {
-  padding: 0 0 20px;
+  margin: 0 0 20px;
 }
 
 .modal-form__input {
+  margin-top: 6px;
   padding: 11px;
   font-size: 16px;
   line-height: 1.125;
@@ -215,16 +113,24 @@
   resize: none;
 }
 
+.modal-form__group-checkbox {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
 .modal-form__checkbox {
   display: block;
-  margin: 0;
+  width: 40px;
+  height: 40px;
   appearance: none;
+  cursor: pointer;
 }
 
 .modal-form__checkbox:before {
   content: '';
   position: absolute;
-  top: 20px;
+  top: 6px;
   left: 0;
   width: 40px;
   height: 40px;
@@ -236,7 +142,7 @@
 .modal-form__checkbox::after {
   content: '';
   position: absolute;
-  top: 32px;
+  top: 18px;
   left: 11px;
   width: 20px;
   height: 10px;
@@ -251,20 +157,15 @@
   opacity: 1
 }
 
-
 .modal-form__checkbox:disabled:before {
   background-color: #cccccc;
 }
 
-
-.modal-form__input:disabled {
-  background-color: #EEE;
-}
-
 .modal-form__file {
-  grid-column: 2;
-  padding: 11px 28px;
+  grid-area: file;
+  width: 250px;
   height: 39px;
+  padding: 11px 28px;
   font-size: 14px;
   font-weight: 600;
   color: #FFF;
@@ -272,32 +173,17 @@
   border-radius: 6px;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
 }
 
 .modal-form__img {
   display: none;
 }
 
-.modal-form__label_type_text {
-  grid-column: 2;
-  grid-row: 1/3;
-}
-
-.modal-form__label_type_disabled {
-  position: relative;
-  grid-row: 4;
-  grid-column: 1;
-  gap: 2.5px;
-}
-
-.modal-form__input_size_small {
-  max-width: 200px;
-  margin: 0 0 0 50px;
-}
-
 .modal-form__info {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
 }
 
 .modal-form__cost {
@@ -322,4 +208,31 @@
   border: none;
   border-radius: 6px;
   background-color: #6D5BD0;
+}
+
+
+@media (max-width: 700px) {
+
+  .modal_container {
+    padding: 30px;
+  }
+
+  .modal-form__fieldset {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "category"
+      "description"
+      "units"
+      "count"
+      "discount"
+      "quantity"
+      "file";
+  }
+
+  .modal-form__info {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }

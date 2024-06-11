@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+  padding: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #6e6893;
+}
+
+.footer__group {
+  display: flex;
+  gap: 5px;
+}
+
+.footer__group-select {
+  width: 8px;
+  background-image: url('../image/arrow-down.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #F2F0F9;
+  outline-color: transparent;
+  appearance: none;
+  border: none;
+}
