@@ -5,12 +5,211 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
-  <script defer src="main.js"></script>
+  <title>Modal</title>
 </head>
 
 <body>
 
+  <section class="cms">
+    <div class="container">
+      <div class="cms__info">
+        <h1 class="cms__title">CMS</h1>
+        <p class="cms__total">Итоговая стоимость: <span class="cms__price">$ 900.00</span></p>
+      </div>
+
+      <div class="cms__goods goods">
+        <div class="goods-filter">
+
+          <button class="goods-filter__button" type="button">Фильтр</button>
+
+          <form class="goods-filter__form">
+            <input class="goods-filter__search" type="search" placeholder="Поиск по наименованию и категории">
+          </form>
+
+          <button class="goods-filter__btn" type="button">Добавить товар</button>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="table-wrapper__box table">
+            <thead class="table__head">
+              <tr class="table__head-row">
+                <th class="table__head-info table__info_left">ID</th>
+                <th class="table__head-info table__info_left">Наименование</th>
+                <th class="table__head-info table__info_left">Категория</th>
+                <th class="table__head-info">Ед/изм</th>
+                <th class="table__head-info">Количество</th>
+                <th class="table__head-info">Цена</th>
+                <th class="table__head-info table__info_left" colspan="2">Итог</th>
+              </tr>
+            </thead>
+
+            <tbody class="table__body">
+              <tr class="table__head-row">
+                <td class="table__info table__info_left">246016548</td>
+                <td class="table__info table__info_left">Навигационная система Soundmax</td>
+                <td class="table__info table__info_left">Техника для дома</td>
+                <td class="table__info">шт</td>
+                <td class="table__info">5</td>
+                <td class="table__info">$100</td>
+                <td class="table__info">$500</td>
+                <td class="table__info table__info_btn">
+                  <button class="table__button table__button_no-img" type="button"></button>
+                  <button class="table__button table__button_edit" type="button"></button>
+                  <button class="table__button table__button_delete" type="button"></button>
+                </td>
+              </tr>
+
+              <tr class="table__head-row">
+                <td class="table__info table__info_left">937295527</td>
+                <td class="table__info table__info_left">Настольная игра “На 4-х ногах”</td>
+                <td class="table__info table__info_left">Настольные игры</td>
+                <td class="table__info">шт</td>
+                <td class="table__info">12</td>
+                <td class="table__info">$14</td>
+                <td class="table__info">$168</td>
+                <td class="table__info table__info_btn">
+                  <button class="table__button table__button_img" type="button"></button>
+                  <button class="table__button table__button_edit" type="button"></button>
+                  <button class="table__button table__button_delete" type="button"></button>
+                </td>
+              </tr>
+
+              <tr class="table__head-row">
+                <td class="table__info table__info_left">246016548</td>
+                <td class="table__info table__info_left">Навигационная система Soundmax</td>
+                <td class="table__info table__info_left">Техника для дома</td>
+                <td class="table__info">шт</td>
+                <td class="table__info">5</td>
+                <td class="table__info">$100</td>
+                <td class="table__info">$500</td>
+                <td class="table__info table__info_btn">
+                  <button class="table__button table__button_img" type="button"></button>
+                  <button class="table__button table__button_edit" type="button"></button>
+                  <button class="table__button table__button_delete" type="button"></button>
+                </td>
+              </tr>
+
+              <tr class="table__head-row">
+                <td class="table__info table__info_left">246016548</td>
+                <td class="table__info table__info_left">Навигационная система Soundmax</td>
+                <td class="table__info table__info_left">Техника для дома</td>
+                <td class="table__info">шт</td>
+                <td class="table__info">5</td>
+                <td class="table__info">$100</td>
+                <td class="table__info">$500</td>
+                <td class="table__info table__info_btn">
+                  <button class="table__button table__button_img" type="button"></button>
+                  <button class="table__button table__button_edit" type="button"></button>
+                  <button class="table__button table__button_delete" type="button"></button>
+                </td>
+              </tr>
+
+              <tr class="table__head-row">
+                <td class="table__info table__info_left">246016548</td>
+                <td class="table__info table__info_left">Навигационная система Soundmax</td>
+                <td class="table__info table__info_left">Техника для дома</td>
+                <td class="table__info">шт</td>
+                <td class="table__info">5</td>
+                <td class="table__info">$100</td>
+                <td class="table__info">$500</td>
+                <td class="table__info table__info_btn">
+                  <button class="table__button table__button_img" type="button"></button>
+                  <button class="table__button table__button_edit" type="button"></button>
+                  <button class="table__button table__button_delete" type="button"></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="footer">
+            <div class="footer__group">
+              <p class="footer__group-page">Показывать на странице: 10</p>
+              <select class="footer__group-select" name="page" id="page"></select>
+            </div>
+            <p class="footer__pages">1-10 of 276</p>
+
+            <button class="fotter__button" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path
+                  d="M5.79971 1.10636C6.42812 0.51287 5.43313 -0.426818 4.80472 0.216126L0.196378 4.51891C-0.0654595 4.7662 -0.0654595 5.21131 0.196378 5.4586L4.80472 9.81084C5.43313 10.4043 6.42812 9.46464 5.79971 8.87115L1.71504 5.01348L5.79971 1.10636Z"
+                  fill="#6E6893" />
+              </svg>
+            </button>
+
+            <button class="fotter__button" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path
+                  d="M0.200293 1.10636C-0.428118 0.51287 0.566865 -0.426818 1.19528 0.216126L5.80362 4.51891C6.06546 4.7662 6.06546 5.21131 5.80362 5.4586L1.19528 9.81084C0.566865 10.4043 -0.428118 9.46464 0.200293 8.87115L4.28496 5.01348L0.200293 1.10636Z"
+                  fill="#6E6893" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="overlay">
+    <div class="modal modal_container">
+      <p class="modal__text">Добавить ТОВАР</p>
+
+      <button type="submit" class="modal__button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M2 2L22 22" stroke="#6E6893" stroke-width="3" stroke-linecap="round" />
+          <path d="M2 22L22 2" stroke="#6E6893" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <form class="modal-form" name="modal-form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+
+        <fieldset class="modal-form__fieldset">
+          <label for="name" class="modal-form__label modal-form__label_name" id="form__name">Наименование
+            <input class="modal-form__input" type="text" name="name" id="name" required>
+          </label>
+
+          <label for="category" class="modal-form__label modal-form__label_category" id="form__category">Категория
+            <input class="modal-form__input" type="text" name="category" id="category" required>
+          </label>
+
+          <label for="units" class="modal-form__label modal-form__label_units ">Единицы измерения
+            <input class="modal-form__input" type="text" inputmode="numeric" name="units" id="units" required>
+          </label>
+
+          <label for="description" class="modal-form__label modal-form__label_description">Описание
+            <textarea class="modal-form__input" id="description" name="description" rows="5" required></textarea>
+          </label>
+
+          <label for="discount" class="modal-form__label modal-form__label_discount">Дисконт
+            <div class="modal-form__group-checkbox">
+              <input class="modal-form__checkbox" type="checkbox" name="discount">
+              <input class="modal-form__input" type="text" name="discount" id="discount" disabled>
+            </div>
+          </label>
+
+          <label for="quantity" class="modal-form__label modal-form__label_quantity" id="form__quantity">Количество
+            <input class="modal-form__input" type="text" inputmode="numeric" name="quantity" id="quantity" required>
+          </label>
+
+          <label for="count" class="modal-form__label modal-form__label_count" id="form__count">Цена
+            <input class="modal-form__input" type="text" inputmode="numeric" name="count" id="count" required>
+          </label>
+
+          <label for="image" class="modal-form__file">Добавить изображение</label>
+          <input class="modal-form__img" name="modal-image" id="image" type="file" multiple>
+
+        </fieldset>
+
+        <div class="modal-form__info">
+          <p class="modal-form__cost">Итоговая стоимость:<span class="modal-form__price">&nbsp;$900.00</span></p>
+
+          <button class="modal-form__button" type="submit">Добавить товар</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
