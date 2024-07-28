@@ -15,13 +15,33 @@
 }
 
 .footer__group-select {
-  width: 8px;
-  background-image: url('../image/arrow-down.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #F2F0F9;
-  outline-color: transparent;
-  appearance: none;
+  background-color: #F4F2FF;
+  color: #6e6893;
   border: none;
+}
+
+.footer__list {
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  list-style: none;
+}
+
+.footer__item-link:hover {
+  color: #6d5bd0;
+}
+
+.footer__item-link:active {
+  color: #000;
+}
+
+@media (max-width: 550px) {
+  .footer {
+    flex-direction: column;
+    gap: 5px;
+  }
 }

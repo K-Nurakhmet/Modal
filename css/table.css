@@ -18,6 +18,14 @@
   text-transform: uppercase;
 }
 
+.table__head-row {
+  border-bottom: 1px solid #D9D5EC;
+}
+
+.table__head-row:last-child {
+  border: none;
+}
+
 .table__head-info {
   padding: 15px;
 }
@@ -50,28 +58,21 @@
 .table__button {
   width: 20px;
   height: 20px;
-  background-position: center;
-  background-repeat: no-repeat;
+  color: #6E6893;
+}
+
+.table__button:hover {
+  color: #6d5bd0;
+}
+
+.table__button:focus {
+  outline-color: #6d5bd0;
+}
+
+.table__button:active {
+  color: #000;
 }
 
 .table__button_no-img {
-  background-image: url('../image/no-picture.svg');
-}
-
-.table__button_img {
-  background-image: url('../image/picture.svg');
-}
-
-.table__button_edit {
-  background-image: url('../image/edit.svg');
-}
-
-.table__button_delete {
-  background-image: url('../image/delete.svg');
-}
-
-.table__footer {
-  background-color: #F4F2FF;
-  letter-spacing: 0.05em;
-  color: #6e6893;
+  cursor: default;
 }

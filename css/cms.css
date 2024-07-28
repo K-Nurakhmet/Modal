@@ -33,3 +33,10 @@
   font-weight: 700;
   color: #6D5BD0;
 }
+
+@media (max-width: 450px) {
+  .cms__info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
